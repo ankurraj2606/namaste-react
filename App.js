@@ -45,5 +45,7 @@ root.render(<HeaderComponent />);
  * We can skip return if we want if we are using arrow function in a functional component.
  * We can write any JS inside {} in a React Component. Like {console.log("Hi")}
  *
- * Whenever we add any JS inside JSX, it sanitizes it and prevents us from malicious attacks.
+ * Whenever we add any JS inside JSX, JSX sanitizes it and prevents us from malicious attacks.
+ *
+ * <Title /> --> Component composition. It is simply using components inside another components, passing components inside components.
  */
