@@ -1,8 +1,8 @@
 1.  What is Emmet ?
 
-        Emmet is an amazing tool that helps us to write HTML and CSS faster by using simple and small abbreviations that are afterwards converted into codeblocks.
+        Emmet is an amazing tool that helps us to write HTML and CSS faster by using simple and small abbreviations that are afterwards converted into code blocks.
 
-        Eg. div>p will be converted into <div><p></p></div>
+        Eg. div>p will be converted into : <div><p></p></div>
 
 2.  Difference between a library and a Framework?
 
@@ -61,6 +61,8 @@
         Eg. React.createElement("div",null,"Hii);
             ReactDom.render(element, document.getElementById("root"));
 
+        React is the core package but react-dom is used to manipulate DOM.
+
 7.  What is difference between react.development.js and react.production.js files via CDN?
 
         The development versions are not suitable for production. Production versions are more like minified and optimized versions of the react app.
@@ -82,5 +84,18 @@
                 In this case also, during html parsing only script is getting fetched from the network asynchronously in parallel, but here html parsing is not blocked. Here thge script execution is only started after html parsing is fully complete.
                 It doesn't blocks the html parsing.
 
-          * Async doesn't take care of the order of execution of scripts but defer does. Defer executes the script tags only in the order they are written. SO, we need to use defer if one script is dependent on other.
+          * Async doesn't take care of the order of execution of scripts but defer does. Defer executes the script tags only in the order they are written. So, we need to use defer if one script is dependent on other.
 
+9.      What is package-lock.json?
+
+        package-lock.json locks the dependencies version that r used in the project, Never put it inside .gitignore.
+
+        It keeps the exact version of dependencies. It keeps the hash version inside integrity object.
+
+*       npx means execute using npm
+
+*       Hot module reloading (HMR)
+
+*       File watcher algorithm (C++)
+
+*       dist is developer build
