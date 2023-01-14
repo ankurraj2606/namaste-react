@@ -154,4 +154,27 @@ root.render(container);
  *    Functional components are called like this. <Header />
  *    But they are end of day a JS function, so they can be called like a function variable {Header()}
  *
+ * ? React State :
+ *
+ * ! Every component in React maintains a state , and we can put all our variables inside that state. Everytime we need to create a local
+ *   variable, we can use state in it.
+ *
+ * ? Hooks :
+ *   React Hooks are just like JS functions. Gives us some functionality.
+ *
+ *
+ * ? useState :
+ *
+ *  used to create state variable, comes from React library, and imported using named import.
+ *  useState function returns an array and the first array element is the state variable.
+ *
+ *  If we don't use state variable and some local variable, React will not know that variable has changed, and won't re-render the UI.
+ *  React keeps track of all the state variable, so if a state variable changes, React will get to know of it and re-render the UI.
+ *
+ */
+
+/**
+ * ! Micro Services ----->
+ *
+ *
  */
