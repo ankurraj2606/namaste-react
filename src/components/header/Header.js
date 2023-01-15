@@ -15,9 +15,9 @@ const HeaderComponent = () => {
           <li className="list-items">Contact Us</li>
           <li className="list-items">Cart</li>
           {isLoggedIn ? (
-            <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log Out</button>
+            <button onClick={() => setIsLoggedIn(!isLoggedIn)} className="btn login-logout">Log Out</button>
           ) : (
-            <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log In</button>
+            <button onClick={() => setIsLoggedIn(!isLoggedIn)} className="btn login-logout">Log In</button>
           )}
         </ul>
       </div>

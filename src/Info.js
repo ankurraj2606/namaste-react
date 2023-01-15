@@ -108,6 +108,17 @@ import ReactDOM from "react-dom/client";
  * Developer Experience
  * Syntactical Sugar
  * Easier to write nested html elements.
+ * 
+ *! In JSX, we can't write JS like I have shown below.
+ * {
+ * let a = 20;
+ * console.log(a);
+ * }
+ * 
+ * ! But we can write JS expressions like I have shown below:
+ * {
+ * ((let a = 20), console.log(a);)
+ * }
  */
 
 const heading1 = React.createElement(
@@ -175,11 +186,14 @@ root.render(container);
  *
  * ? useEffect : 
  * 
+ * Takes two parameters, one callback function and one dependency array.
+ * It's default behaviour is to get called after each render.
+ * 
  * Used in three ways - 
  * 
  * ! Without dependency Array -->
  * 
- * The callback function will get called after every re-render.
+ * The callback function will get called after every render or re-render.
  * 
  *  useEffect(()=>{
  *   console.log("called on every re-render")
@@ -201,6 +215,9 @@ root.render(container);
  *   console.log("called on every re-render")
  *  },[searchText])
  * 
+ * ? Sequence :
+ * At first component will be rendered, after that useEffect would be called. And if anything changes, component will
+ * be re-rendered again.
  */
 
 /**

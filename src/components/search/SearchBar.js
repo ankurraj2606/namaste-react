@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import Sort from "../sort/Sort";
+
+function filterData(searchText, restaurants) {
+  const filteredData =  restaurants.filter((restaurant) =>
+    restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
+  return filteredData
+}
 
 const SearchBar = (props) => {
   const { allRestaurants, setAllRestaurants, filteredRestaurants, setFilteredRestaurants } = props;
@@ -8,16 +15,6 @@ const SearchBar = (props) => {
   //We can't directly modify the variable in react, we can only modify it using a function --> setSearchText
 
   const [searchText, setSearchText] = useState(""); //returns an array [variable-name, fn to modify the variable]
-
-  function filterData(searchText, allRestaurants) {
-    return allRestaurants.filter((restaurant) =>
-      restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
-    );
-  }
-
-  useEffect(()=>{
-    console.log("re-render");
-  },[searchText])
 
   return (
     <div className="search-container">
@@ -32,7 +29,7 @@ const SearchBar = (props) => {
         }}
       />
       <button
-        className="search-btn"
+        className="btn search-btn"
         onClick={() => {
           // need to filter the data and update the state --- restaurants
           const data = filterData(searchText, allRestaurants);
