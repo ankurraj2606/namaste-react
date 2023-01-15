@@ -158,6 +158,8 @@ root.render(container);
  *
  * ! Every component in React maintains a state , and we can put all our variables inside that state. Everytime we need to create a local
  *   variable, we can use state in it.
+ * 
+ * Our React Component re-renders when either a state changes or a props changes
  *
  * ? Hooks :
  *   React Hooks are just like JS functions. Gives us some functionality.
@@ -171,10 +173,52 @@ root.render(container);
  *  If we don't use state variable and some local variable, React will not know that variable has changed, and won't re-render the UI.
  *  React keeps track of all the state variable, so if a state variable changes, React will get to know of it and re-render the UI.
  *
+ * ? useEffect : 
+ * 
+ * Used in three ways - 
+ * 
+ * ! Without dependency Array -->
+ * 
+ * The callback function will get called after every re-render.
+ * 
+ *  useEffect(()=>{
+ *   console.log("called on every re-render")
+ *  })
+ * 
+ * ! With empty dependency Array
+ * 
+ * The callback function will get called only once after initial render.
+ * 
+ * useEffect(()=>{
+ *   console.log("called on every re-render")
+ *  },[])
+ * 
+ * ! With some states or props inside dependency Array
+ * 
+ * The callback function will get called after initial render + when the state of the variable inside the dependency array changes.
+ * 
+ * useEffect(()=>{
+ *   console.log("called on every re-render")
+ *  },[searchText])
+ * 
  */
 
 /**
  * ! Micro Services ----->
+ * 
+ * It simply means we are breaking our project into many small independent chunks (repositories) such as Ui, backend, authentication, notification, logs, database.
+ * 
+ * It solves a major problem that the different teams doesn't concern about the whole project. Separate team will take responsibility of their
+ * own repository. Like Ui team will take care of UI, backend team will take care of backend, etc.
+ * 
+ * Also, the tech stacks are independent, like frontend built in ReactJS, backend in NodeJS, notifications in golang, logs in python, like this.
+ * 
+ * All of these microservices are connected by different urls, which represents different port number, but the domain name is same.
+ * like 4000 --> / , 5000 --> /dapi, 6000 --> /notifications
  *
  *
+ */
+
+/**
+ * ? Shimmer Effect --> UI
  */

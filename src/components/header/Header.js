@@ -2,6 +2,8 @@ import { useState } from "react";
 import Title from "../title/Title";
 
 const HeaderComponent = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   console.log("render()");
   return (
     <div className="header">
@@ -12,6 +14,11 @@ const HeaderComponent = () => {
           <li className="list-items">About Us</li>
           <li className="list-items">Contact Us</li>
           <li className="list-items">Cart</li>
+          {isLoggedIn ? (
+            <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log Out</button>
+          ) : (
+            <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log In</button>
+          )}
         </ul>
       </div>
     </div>
