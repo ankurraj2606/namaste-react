@@ -1,129 +1,226 @@
+* {
+  /* font-family: ProximaNova, arial, Helvetica Neue, sans-serif; */
+  color: rgb(40, 44, 63);
+}
+
+body {
+  margin: 0px;
+}
+
 .app-title {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .app-logo {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid orange;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 7%;
 }
 
-.nav-items>.list {
-    display: flex;
-    list-style-type: none;
+.header .nav-links {
+  text-decoration: none;
 }
 
-.nav-items>.list>.list-items {
-    padding: 10px;
+.header .nav-links:hover {
+  text-decoration: underline;
+}
+
+.nav-items .list {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.nav-items .list .list-items {
+  padding: 10px;
 }
 
 .restaurant-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5%;
 }
 
 .card {
-    width: 20%;
-    margin: 10px 20px;
-    padding: 10px 20px;
+  width: 20%;
+  margin: 10px 12px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid lightgray;
 }
 
-.card>img {
-    width: 100%;
-    text-align: center;
+.restaurant-list .card .restaurant-card p.cuisines-para {
+  font-size: 12px;
 }
 
-.card > .cuisines-para {
-    word-break: break-all;
+.restaurant-list .card .restaurant-card p.offer-para span.offer-para-span {
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.card > .rating-time-cost span {
-    padding-left: 5px;
-    padding-right: 5px;
+.restaurant-list .card .restaurant-card p.rating-time-cost {
+  font-size: 12px;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 2px lightgrey;
+}
+
+.card .restaurant-card {
+  color: black;
+}
+
+.card .restaurant-card h4 {
+  margin: 8px 0px;
+}
+
+.card .restaurant-card p {
+  margin-top: 12px;
+}
+
+.card img {
+  width: 100%;
+  text-align: center;
+}
+
+.card .rating-time-cost span {
+  padding: 0px 8px;
+}
+
+.card .offer-para span.offer-span {
+  padding-right: 8px;
+}
+
+.card .offer-para span .offer-icon {
+  background-color: green;
+  font-size: 12px;
+  fill: white;
+  padding: 4px;
+  border-radius: 50%;
+  margin-bottom: -5px;
+}
+
+.card .rating-time-cost span:first-child {
+  padding-left: 0px;
 }
 
 .search-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-right: 20%;
 }
 
 .search-container .search-input {
-    width: 30%;
-    min-width: 325px;
-    padding: 10px;
-    margin-right: 20px;
-    border-radius: 4px;
+  width: 30%;
+  min-width: 325px;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 4px;
 }
 
 .btn {
-    border: none;
-    border-radius: 4px;
-    width: auto;
-    cursor: pointer;
-    padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+  cursor: pointer;
+  padding: 10px 20px;
 }
 
 .search-container .btn.search-btn {
-    background-color: orange;
+  background-color: orange;
 }
 
 .search-container .search-btn:hover {
-    background-color: white;
-    color: orange;
-    border: 1px solid orange;
+  background-color: white;
+  color: orange;
+  border: 1px solid orange;
 }
 
 .restaurant-list .no-results-class {
-    width: 600px;
-    margin: 32px auto;
+  width: 600px;
+  margin: 32px auto;
 }
 
-.card > .rating-time-cost span.green-rating {
-    background-color: green;
-    padding: 4px;
-    border-radius: 1px;
+.card .rating-time-cost span.green-rating {
+  background-color: green;
+  padding: 4px;
+  border-radius: 1px;
 }
 
-.card > .rating-time-cost span.orange-rating {
-    background-color: orange;
-    padding: 4px;
-    border-radius: 1px;
+.card .rating-time-cost span.green-rating svg,
+.card .rating-time-cost span.orange-rating svg {
+  fill: white;
+  margin-bottom: -1px;
 }
 
-.card > .rating-time-cost span.total-ratings {
-    padding-left: 0px;
-    padding-right: 0px;
+.card .rating-time-cost span.orange-rating {
+  background-color: orange;
+  padding: 4px;
+  border-radius: 1px;
+}
+
+.card .rating-time-cost span.green-rating .rating,
+.card .rating-time-cost span.orange-rating .rating {
+  color: white;
+  padding: 0px;
+  font-size: 12px;
+}
+
+.card .rating-time-cost span.total-ratings {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .sort-container {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .sort-container .btn.sort-btn {
-    background-color: green;
-    margin-left: 20px;
+  background-color: green;
+  margin-left: 20px;
 }
 
 .search-and-sort {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .sort-text {
-    padding: 2px 10px;
+  padding: 2px 10px;
 }
 
-.sort-btn-cost, .sort-btn-time, .sort-btn-rating, .login-logout {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    margin-left: 8px;
-    margin-right: 8px;
+.sort-btn-cost,
+.sort-btn-time,
+.sort-btn-rating,
+.login-logout {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.shimmer-card {
+  background-color: lightgray;
+  height: 213px;
+}
+
+.error-container {
+  width: 50%;
+  height: 100px;
+  margin: auto;
+}
+
+.percent-icon {
+  background-color: green;
+  font-size: 12px;
+  fill: white;
+  padding: 4px;
+  border-radius: 50%;
 }

@@ -99,3 +99,9 @@
 *       File watcher algorithm (C++)
 
 *       dist is developer build
+
+10. What is a Bundler ?
+
+        Bundler works in a simple way, you can give it any files like stylesheets ( scss, sass, less, stylus ), image files, fonts,
+        JS files, and they will assemble them in a seamless way, so that they will work perfectly in production.
+        It will compile our CSS preprocessors.

@@ -1,0 +1,99 @@
+.restaurant-div {
+  margin: 20px 0px;
+  border: 1px solid orange;
+  background-color: #171a29;
+  padding: 0px 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .restaurant-div .image-details {
+  padding: 0px 64px;
+} */
+
+.restaurant-div p,
+.restaurant-div h1,
+.restaurant-div span {
+  color: white;
+}
+
+.restaurant-div h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.restaurant-details-card {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+  margin: 0px 10px;
+}
+
+.restaurant-details-card .image-details img {
+  width: 350px;
+}
+
+.restaurant-details-card .restaurant-details {
+  padding: 24px 48px;
+}
+
+.offer-details-card {
+  border: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  display: flex;
+  width: 20%;
+  height: fit-content;
+  margin: auto 10px;
+}
+
+.offer-details-card ul li {
+  color: white;
+}
+
+.rating-time-cost_container {
+  display: flex;
+  padding-top: 16px;
+}
+
+.rating,
+.time,
+.cost {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+}
+
+.rating {
+  padding-left: 0px;
+}
+
+.rating .rating-val svg {
+  fill: white;
+  padding-right: 4px;
+}
+
+.restaurant-container p {
+  font-size: 15px;
+  margin: 6px 0;
+  font-weight: 300;
+}
+
+.restaurant-container p.label-para {
+  font-size: 12px;
+  color: gray;
+}
+
+.hr-vertical {
+  border-right: 1px solid #282c3f;
+}
+
+.rating-val,
+.time-val,
+.cost-val {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}

@@ -151,3 +151,103 @@ const RestaurantCard = ({restaurant}) => {
  *   Eg. " export default Header  " can be imported as " import HeaderCOmponent from "./src/Header ";
  *
  */
+
+/**
+ * ? react-router-dom :
+ * 
+ * Used for handling routing between the pages in the react or react-native application
+ * 
+ * ! 1. Need to install the npm package of react-router-dom : npm i react-router-dom
+ *   2. Import th required things : import { createBrowserRouter, RouterProvider } from "react-router-dom";
+ *   3. Always create the variable for calling the createBrowserRouter below youe App component.
+ *   3. create a variable that would call the function createBrowserRouter.
+ *          const appRouter = createBrowserRouter([
+ *            {
+                path: "/",
+                element: <App />,
+                errorElement: <Error />,
+                children: [
+                  {
+                    path: "/about",
+                    element: <About />,
+                  },
+                  {
+                    path: "/contact",
+                    element: <Contact />,
+                  },
+                  {
+                    path: "/",
+                    element: <Body />,
+                  }
+                ],
+              }
+ *          ])
+
+    Here, the path will tell you on which path in address bar which component will come.
+    element will have the component that will come on respective path.
+    errorElement will tell us what component will come if the path user has added is not there in our app.
+    children will show what are the children components are there of the main App.
+    while path is changed, only the children components will change, others will remain there only.
+    There will be an Outlet in the App , where the children components get injected by react in case of routing.
+    Outlet also needs to be imported from react router dom. It is just like a placeholder or container.
+    In react router dom, we mainly use named imports only, inside curly braces {}. Example below:
+
+    import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+    const App = () => {
+      return (
+        <>
+          <HeaderComponent />
+          <Outlet/>
+          <Footer />
+        </>
+      );
+    };
+
+
+  Finally it is time to link the links that we have created inside the header component with the path and it should 
+  work seamlessly.
+
+  import {Link} from "react-router-dom".
+
+  After that wrap all the link items inside Link, corresponding to their paths. Like this.
+
+          <Link to="/">
+            <li className="list-items">Home</li>
+          </Link>
+          <Link to="/about">
+            <li className="list-items">About Us</li>
+          </Link>
+          <Link to="/contact">
+            <li className="list-items">Contact Us</li>
+          </Link>
+          <Link to="">
+            <li className="list-items">Cart</li>
+          </Link>
+
+
+ When we are creating error component to be shown in case of wrong path, the component should be declared first and
+ then exported, otherwise will throw error , like this :
+
+        import { useRouteError } from "react-router-dom";
+        const Error = () => {
+          const err = useRouteError();
+          console.log(err);
+          return (
+            <div className="error-container">
+              <h1>OOPS, Something broke from your side.................</h1>
+              <h2>{err.data}</h2>
+              <p>{err.status + " " + err.statusText}</p>
+            </div>
+          );
+        };
+
+        export default Error;
+
+  Here we have imported useRouteError, which gives us all the details of the routing error. We can create a variable
+  calling useRouteError, and then use it to render the error on the UI like shown above.
+
+  useRouteError only works with createBrowserRouter.
+
+
+ */

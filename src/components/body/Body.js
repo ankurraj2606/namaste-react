@@ -4,6 +4,7 @@ import { RestaurantList } from "../../configs/config";
 import SearchBar from "../search/SearchBar";
 import Shimmer from "../shimmer/Shimmer";
 import Sort from "../sort/Sort";
+import { Link } from "react-router-dom";
 
 export const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -61,7 +62,13 @@ export const Body = () => {
         ) : (
           filteredRestaurants.map((restaurant) => {
             return (
-              <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+              <Link
+                to={"/restaurant/" + restaurant.data.id}
+                key={restaurant.data.id}
+                className="card"
+              >
+                <RestaurantCard {...restaurant.data} />
+              </Link>
             );
           })
         )}

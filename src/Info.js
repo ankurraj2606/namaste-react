@@ -164,6 +164,8 @@ root.render(container);
  *
  *    Functional components are called like this. <Header />
  *    But they are end of day a JS function, so they can be called like a function variable {Header()}
+ * 
+ *    Never create a React component inside another React component.
  *
  * ? React State :
  *
@@ -174,6 +176,8 @@ root.render(container);
  *
  * ? Hooks :
  *   React Hooks are just like JS functions. Gives us some functionality.
+ *   Never ever create a useState inside if-else condition, nor inside any loops.
+ *   Never write any useState outside the React component.
  *
  *
  * ? useState :

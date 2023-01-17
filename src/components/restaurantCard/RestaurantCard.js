@@ -1,4 +1,5 @@
 import { IMG_CDN_URL } from "../../configs/config";
+import { FaPercent, FaStar } from "react-icons/fa";
 
 const RestaurantCard = ({
   cloudinaryImageId,
@@ -8,22 +9,35 @@ const RestaurantCard = ({
   totalRatings,
   deliveryTime,
   costForTwoString,
+  aggregatedDiscountInfo,
 }) => {
   return (
-    <div className="card">
-      <img src={IMG_CDN_URL + cloudinaryImageId} />
-      <h2>{name}</h2>
-      <p className="cuisines-para">{cuisines.join(",")}</p>
-      <p className="rating-time-cost">
-        <span>
-          <span className={avgRating >= 4 ? "green-rating" : "orange-rating"}>
-            {avgRating}
+    <div className="restaurant-container">
+      <div className="restaurant-card">
+        <img src={IMG_CDN_URL + cloudinaryImageId} />
+        <h4>{name}</h4>
+        <p className="cuisines-para">{cuisines.join(",")}</p>
+        <p className="rating-time-cost">
+          <span>
+            <span className={avgRating >= 4 ? "green-rating" : "orange-rating"}>
+              <span>
+                <FaStar />
+              </span>
+              <span className="rating">{avgRating}</span>
+            </span>
           </span>
-          (<span className="total-ratings">{totalRatings}</span>)
-        </span>
-        |<span>{deliveryTime} mins</span>|<span>{costForTwoString}</span>
-      </p>
-      <hr></hr>
+          |<span>{deliveryTime} mins</span>|<span>{costForTwoString}</span>
+        </p>
+        <hr></hr>
+        <p className="offer-para">
+          <span className="offer-span">
+            <FaPercent className="offer-icon" />
+          </span>
+          <span className="offer-para-span">
+            {aggregatedDiscountInfo.shortDescriptionList[0].meta}
+          </span>
+        </p>
+      </div>
     </div>
   );
 };
