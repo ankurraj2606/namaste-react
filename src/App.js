@@ -8,12 +8,13 @@ import Error from "./components/error/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./components/contact/ContactUs";
 import RestaurantMenu from "./components/restaurantMenu/RestaurantMenu";
+import Profile from "./components/profile/Profile";
 
 const App = () => {
   return (
     <>
       <HeaderComponent />
-      <Outlet/>
+      <Outlet />
       <Footer />
     </>
   );
@@ -28,6 +29,12 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+        children: [
+          {
+            path: "profile", // Path should be about and not "/about"
+            element: <Profile />,
+          },
+        ],
       },
       {
         path: "/contact",
@@ -40,7 +47,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:id",
         element: <RestaurantMenu />,
-      }
+      },
     ],
   },
 ]);

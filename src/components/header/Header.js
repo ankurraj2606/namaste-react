@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const HeaderComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  console.log("render()");
   return (
     <div className="header">
       <Link className="nav-links" to="/">
