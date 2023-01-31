@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Title from "../title/Title";
 import { Link } from "react-router-dom";
+import useOnline from "../../utils/useOnline";
 
 const HeaderComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const isOnline = useOnline();
 
   return (
     <div className="header">
@@ -30,6 +32,7 @@ const HeaderComponent = () => {
             </Link>
           </ul>
         </div>
+        <h1>{isOnline ? "✅" : "🔴"}</h1>
         <div className="login-logout-container">
           {isLoggedIn ? (
             <button

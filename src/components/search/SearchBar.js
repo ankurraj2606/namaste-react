@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import Sort from "../sort/Sort";
-
-function filterData(searchText, restaurants) {
-  const filteredData =  restaurants.filter((restaurant) =>
-    restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
-  return filteredData
-}
+import { filterData } from "../../utils/helpers";
 
 const SearchBar = (props) => {
-  const { allRestaurants, setAllRestaurants, filteredRestaurants, setFilteredRestaurants } = props;
+  const {
+    allRestaurants,
+    setAllRestaurants,
+    filteredRestaurants,
+    setFilteredRestaurants,
+  } = props;
 
   //searchText is a local state variable.
   //We can't directly modify the variable in react, we can only modify it using a function --> setSearchText
@@ -34,7 +34,7 @@ const SearchBar = (props) => {
           // need to filter the data and update the state --- restaurants
           const data = filterData(searchText, allRestaurants);
           //update the states ---> restaurants
-          setFilteredRestaurants(data)
+          setFilteredRestaurants(data);
         }}
       >
         Search

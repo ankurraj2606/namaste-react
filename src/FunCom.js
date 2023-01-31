@@ -129,7 +129,7 @@ const RestaurantCard = ({restaurant}) => {
  *  is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
  *  Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign
  *  priority to different types of updates; and new concurrency primitives.
- * 
+ *
  *  React diff algorithms is written in React core library.
  *  DOM manipulation and DOM updates happens through React DOM library.
  *  React Native also uses the same diff algorithm.
@@ -250,4 +250,10 @@ const RestaurantCard = ({restaurant}) => {
   useRouteError only works with createBrowserRouter.
 
 
+ */
+
+/**
+ * ! Modular
+ *
+ * Means code is broken into small, reusable pieces
  */
