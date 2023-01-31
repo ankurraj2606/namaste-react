@@ -1,37 +1,37 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Profile from "../profile/Profile";
 import ProfileClass from "../class-components/ProfileClass";
 
-// const About = () => {
-//   return (
-//     <div>
-//       <h1>This is the about page</h1>
-//       <Profile />
-//       <Outlet />
-//       <ProfileClass name={"Ankur"} xyz="abc" />
-//     </div>
-//   );
-// };
+const About = () => {
+  return (
+    <div>
+      <h1>This is the about page</h1>
+      <Link to="/about/profile">
+        <button className="btn">Profile</button>
+      </Link>
+      <Outlet />
+    </div>
+  );
+};
 
-class About extends React.Component {
-  constructor(props) {
-    super(props);
-    //console.log("About constructor");
-  }
+// class About extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     //console.log("About constructor");
+//   }
 
-  render() {
-    //console.log("About render");
-    return (
-      <div>
-        <h1>This is the about page</h1>
-        <Profile />
-        <Outlet />
-        <ProfileClass name={"first child"} xyz="abc" />
-      </div>
-    );
-  }
-}
+//   render() {
+//     //console.log("About render");
+//     return (
+//       <div>
+//         <h1>This is the about page</h1>
+//         <Outlet />
+//         <ProfileClass name={"first child"} xyz="abc" />
+//       </div>
+//     );
+//   }
+// }
 
 export default About;
 

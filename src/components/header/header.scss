@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-container {
+        display: flex;
+        .nav-items {
+            display: flex;
+            .list {
+                display: flex;
+                list-style-type: none;
+                text-decoration: none;
+
+                .nav-links {
+                    text-decoration: none;
+                    .list-items {
+                        padding: 10px;
+                    }
+                }
+
+                .nav-links:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .login-logout-container {
+            padding-top: 16px;
+
+            .login-logout {
+                min-width: 100px;
+            }
+        }
+    }
+}

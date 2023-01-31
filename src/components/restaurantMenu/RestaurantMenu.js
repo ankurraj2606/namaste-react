@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../../configs/config.js";
 import Shimmer from "../shimmer/Shimmer";
-import "./restaurantMenu.css";
+import "./restaurantMenu.scss";
 import { FaStar } from "react-icons/fa";
 
 const RestaurantMenu = () => {
@@ -78,12 +78,18 @@ const RestaurantMenu = () => {
           </ul>
         </div>
       </div>
-      <ul>
-        {Object.values(restaurant?.menu?.items).map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-        {console.log(Object.values(restaurant?.menu?.items))}
-      </ul>
+
+      {Object.values(restaurant?.menu?.items).map((item) => (
+        <ul>
+          <li key={item.id}>
+            <div>{item.category}</div>
+            {item.category == "Chicken Dry Items" ? (
+              <div>{item.name}</div>
+            ) : null}
+          </li>
+        </ul>
+      ))}
+      {console.log(Object.values(restaurant?.menu?.items))}
     </div>
   );
 };

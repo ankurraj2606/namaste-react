@@ -17,26 +17,22 @@ const RestaurantCard = ({
         <img src={IMG_CDN_URL + cloudinaryImageId} />
         <h4>{name}</h4>
         <p className="cuisines-para">{cuisines.join(",")}</p>
-        <p className="rating-time-cost">
-          <span>
-            <span className={avgRating >= 4 ? "green-rating" : "orange-rating"}>
-              <span>
-                <FaStar />
-              </span>
-              <span className="rating">{avgRating}</span>
+        <div className="rating-time-cost">
+          <div className={avgRating >= 4 ? "green-rating" : "orange-rating"}>
+            <span>
+              <FaStar />
+              {avgRating}
             </span>
-          </span>
-          |<span>{deliveryTime} mins</span>|<span>{costForTwoString}</span>
-        </p>
-        <hr></hr>
-        <p className="offer-para">
-          <span className="offer-span">
-            <FaPercent className="offer-icon" />
-          </span>
-          <span className="offer-para-span">
-            {aggregatedDiscountInfo.shortDescriptionList[0].meta}
-          </span>
-        </p>
+            <span> | {deliveryTime} mins</span>|<span>{costForTwoString}</span>
+          </div>
+          <div className="separator"></div>
+          <p className="offer-para">
+            <span className="offer-span">
+              <FaPercent className="offer-icon" />
+              {aggregatedDiscountInfo.shortDescriptionList[0].meta}
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );

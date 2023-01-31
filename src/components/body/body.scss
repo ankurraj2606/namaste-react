@@ -1,0 +1,28 @@
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5%;
+    justify-content: center;
+}
+
+.card {
+    width: 19%;
+    margin: 10px 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid lightgray;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 2px lightgrey;
+}
+
+.card img {
+    width: 100%;
+    text-align: center;
+}
+
+.restaurant-list .no-results-class {
+    width: 600px;
+    margin: 32px auto;
+}

@@ -1,0 +1,32 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-right: 20%;
+}
+
+.search-container .search-input {
+    width: 30%;
+    min-width: 325px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    width: auto;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.search-container .btn.search-btn {
+    background-color: orange;
+}
+
+.search-container .search-btn:hover {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+}

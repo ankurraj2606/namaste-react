@@ -1,0 +1,32 @@
+@import "/src/components/about/about.scss";
+@import "/src/components//body/body.scss";
+@import "/src/components/company/company.scss";
+@import "/src/components/contact/contact.scss";
+@import "/src/components/error/error.scss";
+@import "/src/components/footer/footer.scss";
+@import "/src/components/header/header.scss";
+@import "/src/components/legal/legal.scss";
+@import "/src/components/profile/profile.scss";
+@import "/src/components/restaurantCard/restaurantcard.scss";
+@import "/src/components/restaurantMenu/restaurantMenu.scss";
+@import "/src/components/search/searchbar.scss";
+@import "/src/components/shimmer/shimmer.scss";
+@import "/src/components/sort/sort.scss";
+
+* {
+    /* font-family: ProximaNova, arial, Helvetica Neue, sans-serif; */
+    color: rgb(40, 44, 63);
+}
+
+body {
+    margin: 0px;
+}
+
+.app-title {
+    margin: 0 10px;
+}
+
+.app-logo {
+    width: 70px;
+    height: 70px;
+}
