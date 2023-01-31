@@ -30,9 +30,12 @@ const HeaderComponent = () => {
             <Link className="nav-links" to="/about/profile">
               <li className="list-items">Profile</li>
             </Link>
+            <Link className="nav-links" to="/instamart">
+              <li className="list-items">Instamart</li>
+            </Link>
           </ul>
         </div>
-        <h1>{isOnline ? "✅" : "🔴"}</h1>
+        <h1>{isOnline ? "✔" : "🔴"}</h1>
         <div className="login-logout-container">
           {isLoggedIn ? (
             <button

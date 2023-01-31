@@ -257,3 +257,51 @@ const RestaurantCard = ({restaurant}) => {
  *
  * Means code is broken into small, reusable pieces
  */
+
+/**
+ * Chunking
+ * Code splitting
+ * Lazy Loading
+ * On demand loading
+ * Dynamic Bundling
+ * Dynamic Import
+ */
+
+/**
+ * ? Ways of writing CSS : 
+ * 
+ * 1. Normal Native CSS in css file.
+ * 2. SCSS
+ * 3. Inline CSS
+ * 4. Component Libraries or CSS libraries like Material UI, Bootstrap, Chakra UI, Ant Design UI, etc.
+ * 5. Styles components
+ * 6. Tailwind CSS framework.
+ * 
+ * 
+ * ! when we write inline styles in React , we use "style" attribute, and this style attribute takes a JS object.
+ * 
+ * We write JS inside React in {}. So, first curly braces is for writing JS and the next {} is of the syntax of style object.
+ * we write like : 
+ * 
+ * <input style = {{backgroundColor:"red"}} />
+ * 
+ * Or, we can make an style object like this : inputStyle = { backgroundColor:"red" } . And we can use this obj inside the
+ * style attribute like this : 
+ * 
+ * <input style = { inputStyle } />
+ * 
+ */
+
+/**
+ * ? Pros of using CSS libraries or framework : 
+ * 
+ * -> Makes our app development fast, and easy to code.
+ * -> Makes our UI look consistent.
+ * -> Takes care of device responsiveness.
+ * 
+ * 
+ * ? Cons of using CSS libraries or framework : 
+ * 
+ * -> Increases our bundle size
+ * -> We lose a lot of control over how our ui will  look like. Customization is very hard.
+ */

@@ -13,13 +13,16 @@
 
                 .nav-links {
                     text-decoration: none;
+
                     .list-items {
                         padding: 10px;
                     }
-                }
 
-                .nav-links:hover {
-                    text-decoration: underline;
+                    .list-items:hover {
+                        text-decoration: underline;
+                        color: orange;
+                        text-decoration-color: orange;
+                    }
                 }
             }
         }
